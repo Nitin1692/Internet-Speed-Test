@@ -13,4 +13,7 @@ root.iconphoto(False,logo)
 top = PhotoImage(file="top.png")
 Label(root,image=top).pack()
 
+Main = PhotoImage(file="main.png")
+Label(root,image=Main).pack(pady=(40,0))
+
 root.mainloop()
