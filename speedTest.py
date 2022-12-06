@@ -16,4 +16,8 @@ Label(root,image=top).pack()
 Main = PhotoImage(file="main.png")
 Label(root,image=Main).pack(pady=(40,0))
 
+button = PhotoImage(file="Start.png")
+Button = Button(root,image=button,bd=0)
+Button.pack(pady=20)
+
 root.mainloop()
