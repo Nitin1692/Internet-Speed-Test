@@ -10,4 +10,7 @@ root.configure(bg="#949494")
 logo = PhotoImage(file="logo.png")
 root.iconphoto(False,logo)
 
+top = PhotoImage(file="top.png")
+Label(root,image=top,bg="#1a212d").pack()
+
 root.mainloop()
