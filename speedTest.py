@@ -20,4 +20,27 @@ button = PhotoImage(file="Start.png")
 Button = Button(root,image=button,bd=0,activebackground="#a1212d",cursor="hand2")
 Button.pack(pady=20)
 
+Label(root,text="PING",font="arial 10 bold",bg="#949494").place(x=45,y=100)
+Label(root,text="DOWNLOAD",font="arial 10 bold",bg="#949494").place(x=135,y=100)
+Label(root,text="UPLOAD",font="arial 10 bold",bg="#949494").place(x=260,y=100)
+
+Label(root,text="MS",font="arial 7 bold",bg="#949494",fg="black").place(x=55,y=75)
+Label(root,text="MBPS",font="arial 7 bold",bg="#949494",fg="black").place(x=160,y=75)
+Label(root,text="MBPS",font="arial 7 bold",bg="#949494",fg="black").place(x=270,y=75)
+
+Label(root,text="Download",font="arial 15 bold",bg="#949494",fg="black").place(x=130,y=300)
+Label(root,text="MBPS",font="arial 15 bold",bg="#949494",fg="black").place(x=151,y=390)
+
+ping = Label(root,text="00",font="arial 13 bold",bg="#949494",fg="black")
+ping.place(x=65,y=60,anchor="center")
+
+download = Label(root,text="00",font="arial 13 bold",bg="#949494",fg="black")
+download.place(x=175,y=60,anchor="center")
+
+upload = Label(root,text="00",font="arial 13 bold",bg="#949494",fg="black")
+upload.place(x=285,y=60,anchor="center")
+
+Download = Label(root,text="00",font="arial 40 bold",bg="#949494")
+Download.place(x=185,y=360,anchor="center")
+
 root.mainloop()
