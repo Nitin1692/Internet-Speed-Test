@@ -1,11 +1,26 @@
 from tkinter import *
 import speedtest
+import threading
 
 root = Tk()
 root.title("Internet Speed Test")
 root.geometry("360x600")
 root.resizable(False,False)
 root.configure(bg="#1a212d")
+
+def Check():
+    test = speedtest.Speedtest()
+
+    Uploading = round(test.upload()/(1024*1024),2)
+    upload.config(text=Uploading)
+
+    downloading = round(test.download()/(1024*1024),2)
+    download.config(text=downloading)
+    Download.config(text=downloading)
+    
+    servernames= []
+    test.get_servers(servernames)
+    ping.config(text=test.results.ping)
 
 logo = PhotoImage(file="logo.png")
 root.iconphoto(False,logo)
@@ -17,7 +32,7 @@ Main = PhotoImage(file="main.png")
 Label(root,image=Main).pack(pady=(40,0))
 
 button = PhotoImage(file="Start.png")
-Button = Button(root,image=button,bd=0,activebackground="#a1212d",cursor="hand2")
+Button = Button(root,image=button,bd=0,activebackground="#a1212d",cursor="hand2",command=threading.Thread(target=Check).start())
 Button.pack(pady=20)
 
 Label(root,text="PING",font="arial 10 bold",bg="#949494").place(x=45,y=100)
